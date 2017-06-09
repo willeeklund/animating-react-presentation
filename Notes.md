@@ -30,6 +30,14 @@ Animations in React
     Show/hide animation
   AnimateOnChange
     keyframe-animation using class
+  Flip animation
+    react-flip-move, https://medium.com/developers-writing/animating-the-unanimatable-1346a5aab3cd
+    http://joshwcomeau.github.io/react-flip-move/examples/#/shuffle?_k=9riba1
 
 ## keyframe-animation with JSS
   Make the keyframes-selector global with the '@'
+
+## Expected hickups
+When the dynamic changes, such as the Animate component being unmounted, you need to make changes.
+
+One of the challenges is that render() is called multiple times.
