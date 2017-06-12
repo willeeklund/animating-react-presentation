@@ -153,6 +153,50 @@ render() {
 
 -->
 	</section>
+	<section>
+		<h3>Keyframe-animation</h3>
+<pre><code data-trim>
+.run {
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  0%   {top: 0px; left: 0px; background: red;}
+  25%  {top: 0px; left: 100px; background: blue;}
+  50%  {top: 100px; left: 100px; background: yellow;}
+  75%  {top: 100px; left: 0px; background: green;}
+  100% {top: 0px; left: 0px; background: red;}
+}
+
+</pre></code>
+	<a
+		target="_blank"
+		href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_keyframes4"
+	>Link</a>
+	</section>
+	<section>
+		<h3>Keyframe-animation in JSS</h3>
+<pre><code data-trim>
+'@global': {
+'@keyframes myname': {
+    from: {
+      opacity: 1,
+    },
+    to: {
+      opacity: 0,
+      width: '100%',
+      height: '100%',
+      transform: 'initial',
+    },
+},
+}
+
+</pre></code>
+	<a
+		target="_blank"
+		href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_keyframes4"
+	>Link</a>
+	</section>
 </section>
 
 <section>
@@ -176,6 +220,24 @@ render() {
 		<a href="https://localhost:8081/instrument/ericsson-telefonab-l-m-ser-b/16750901/order" target="_blank">
 			Link
 		</a>
+	</section>
+	<section>
+		<pre><code data-trim>
+const usedButton = this.buyButtons.children[btnIndex];
+const buttonClientRect = usedButton.getBoundingClientRect();
+const containerClientRect = this.container.getBoundingClientRect();
+
+// Calculate initial translation used in the button animation
+const deltaX = buttonClientRect.left - containerClientRect.left;
+const deltaY = buttonClientRect.top - containerClientRect.top;
+const transform = `translate(${deltaX}px, ${deltaY}px)`;
+const { width, height } = buttonClientRect;
+this.props.updatePlaceOrderButton({
+  transform,
+  width,
+  height,
+});
+		</code></pre>
 	</section>
 </section>
 

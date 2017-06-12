@@ -1,9 +1,10 @@
 Animations in React
 ===================
 
-## Two types used in Next
+## Three types used in Next
 * ReactTransitionGroup
 * AnimateOnChange
+* FLIP animations
 
 ### ReactTransitionGroup
   Recommended by Facebook
@@ -18,7 +19,7 @@ Animations in React
       Remove at unmounting after correct time for the animation
   Transitions
     Transition animation with classes
-  Optional animation when ReactTransitionGroup component was added
+  Optional animation when ReactTransitionGroup component was added, "appear"
 
 ### AnimateOnChange
   Function called in render() to determine if a class should be added
