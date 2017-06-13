@@ -61,6 +61,52 @@
 
 <section>
 	<section>
+		<h2>ReactTransitionGroup</h2>
+	</section>
+
+	<section>
+		<img src="images/react-transition-group-example.png" />
+<!--
+
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+
+<CSSTransitionGroup
+	component="div"
+	transitionName="example"
+	transitionEnterTimeout={1000}
+	transitionLeaveTimeout={300}
+>
+	{this.props.visible ?
+		<ComponentToShow />
+	: null }
+</CSSTransitionGroup>
+
+-->
+	</section>
+
+	<section>
+	<pre><code data-trim>
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+	</code></pre>
+	</section>
+
+	<section>
 		<h2>Animate component</h2>
 		<h5>Based on ReactTransitionGroup</h5>
 	</section>
@@ -83,27 +129,6 @@ import { Animate } from 'nordnet-ui-kit';
 -->
 	</section>
 
-	<section>
-	<pre><code data-trim>
-.example-enter {
-  opacity: 0.01;
-}
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.example-leave {
-  opacity: 1;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
-	</code></pre>
-	</section>
 	<section>
 		<h3>Demo of &lt;Animate&gt;</h3>
 		<a href="https://nordnet.github.io/nordnet-ui-kit/#!/Animate" target="_blank">
